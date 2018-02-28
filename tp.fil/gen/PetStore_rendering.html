@@ -1,0 +1,77 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>PetStore UML Model</title>
+	</head>
+	
+	<body>
+	
+		<img src="http://yuml.me/diagram/scruffy/class/[SellerContactInfo|
+			contactInfoID : String;
+			lastName : String;
+			firstName : String;
+			email : String;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[Tag|
+			tagID : int;
+			items : Collection<Item>;
+			tag : String;
+			refCount : int;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[Address|
+			addressID : String;
+			street1 : String;
+			street2 : String;
+			city : String;
+			state : String;
+			zip : String;
+			latitude : double;
+			longitude : double;
+			COMMA : String;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[FileUploadResponse|
+			itemId : String;
+			productId : String;
+			message : String;
+			status : String;
+			duration : String;
+			durationString : String;
+			startDate : String;
+			endDate : String;
+			uploadSize : String;
+			thumbnail : String;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[Category|
+			categoryID : String;
+			name : String;
+			description : String;
+			imageURL : String;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[PayPalBean|
+			postData : BuyNowPostData;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[ZipLocation|
+			zipCode : int;
+			city : String;
+			state : String;
+		]" >
+
+		<img src="http://yuml.me/diagram/scruffy/class/[Product|
+			productID : String;
+			categoryID : String;
+			name : String;
+			description : String;
+			imageURL : String;
+		]" >
+
+	</body>
+	
+	</html>
+

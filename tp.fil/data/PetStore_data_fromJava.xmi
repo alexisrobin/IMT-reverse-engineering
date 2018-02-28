@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<data:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:data="http://data">
+  <Classes Name="SellerContactInfo">
+    <Attributes Type="String" Name="contactInfoID"/>
+    <Attributes Type="String" Name="lastName"/>
+    <Attributes Type="String" Name="firstName"/>
+    <Attributes Type="String" Name="email"/>
+  </Classes>
+  <Classes Name="Tag">
+    <Attributes Type="int" Name="tagID"/>
+    <Attributes Type="Collection&lt;Item>" Name="items"/>
+    <Attributes Type="String" Name="tag"/>
+    <Attributes Type="int" Name="refCount"/>
+  </Classes>
+  <Classes Name="Address">
+    <Attributes Type="String" Name="addressID"/>
+    <Attributes Type="String" Name="street1"/>
+    <Attributes Type="String" Name="street2"/>
+    <Attributes Type="String" Name="city"/>
+    <Attributes Type="String" Name="state"/>
+    <Attributes Type="String" Name="zip"/>
+    <Attributes Type="double" Name="latitude"/>
+    <Attributes Type="double" Name="longitude"/>
+    <Attributes Type="String" Name="COMMA"/>
+  </Classes>
+  <Classes Name="FileUploadResponse">
+    <Attributes Type="String" Name="itemId"/>
+    <Attributes Type="String" Name="productId"/>
+    <Attributes Type="String" Name="message"/>
+    <Attributes Type="String" Name="status"/>
+    <Attributes Type="String" Name="duration"/>
+    <Attributes Type="String" Name="durationString"/>
+    <Attributes Type="String" Name="startDate"/>
+    <Attributes Type="String" Name="endDate"/>
+    <Attributes Type="String" Name="uploadSize"/>
+    <Attributes Type="String" Name="thumbnail"/>
+  </Classes>
+  <Classes Name="Category">
+    <Attributes Type="String" Name="categoryID"/>
+    <Attributes Type="String" Name="name"/>
+    <Attributes Type="String" Name="description"/>
+    <Attributes Type="String" Name="imageURL"/>
+  </Classes>
+  <Classes Name="PayPalBean">
+    <Attributes Type="BuyNowPostData" Name="postData"/>
+  </Classes>
+  <Classes Name="ZipLocation">
+    <Attributes Type="int" Name="zipCode"/>
+    <Attributes Type="String" Name="city"/>
+    <Attributes Type="String" Name="state"/>
+  </Classes>
+  <Classes Name="Product">
+    <Attributes Type="String" Name="productID"/>
+    <Attributes Type="String" Name="categoryID"/>
+    <Attributes Type="String" Name="name"/>
+    <Attributes Type="String" Name="description"/>
+    <Attributes Type="String" Name="imageURL"/>
+  </Classes>
+</data:Model>

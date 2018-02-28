@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('http://data') /]
+[comment 'platform:/resource/tp.fil/src/tp/fil/resources/Data.ecore' /]
+ 
+[template public generateHTML(model : Model)]
+[comment @main/]  
+[file ('PetStore_rendering.html', false, 'UTF-8')]
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>PetStore UML Model</title>
+	</head>
+	
+	<body>
+	
+	[for (c : Class | model.Classes) separator('\n')]
+		<img src="http://yuml.me/diagram/scruffy/class/['[' + c.Name + '|'/]
+		[for (a : Attribute | c.Attributes)]
+			[a.Name + ' : ' + a.Type + ';'/]
+		[/for]
+		[']'/]" >
+	[/for]
+
+	</body>
+	
+	</html>
+
+[/file]
+[/template]

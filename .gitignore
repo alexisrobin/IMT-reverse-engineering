@@ -1,0 +1,17 @@
+.metadata
+.DS_store
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# just keep PetStore src file
+PetStore/*
+!PetStore/src/
+

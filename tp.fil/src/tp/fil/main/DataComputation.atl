@@ -1,0 +1,29 @@
+-- @nsURI Java=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+-- @path Data=/tp.fil/src/tp/fil/resources/Data.ecore
+
+module DataComputation;
+create OUT : Data from IN : Java;
+
+-- This rule transforms a ClassDeclaration into a Class.
+rule ClassDeclaration2Class {
+	from
+		s : Java!ClassDeclaration(
+			if s.package.oclIsUndefined() then false else s.package.name = 'model'
+				and if s.package.package.oclIsUndefined() then false else s.package.package.name = 'petstore' endif endif)
+	to
+		t : Data!Class(
+			Name <- s.name,
+			Attributes <- s.bodyDeclarations->select(bd | bd.oclIsTypeOf(Java!FieldDeclaration))
+												->collect(fd | thisModule.FieldDeclaration2Attribute(fd))
+		)
+}
+
+lazy rule FieldDeclaration2Attribute {
+	from
+		s : Java!FieldDeclaration
+	to
+		t : Data!Attribute(
+			Name <- s.fragments.first().name,
+			Type <- s.type.type.name
+		)
+}
